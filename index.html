@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+  </head>
+  <body
+    class="font-poppins bg-slate-200 p-4 grid place-items-center dark:bg-black dark:text-white"
+  >
+    <!-- !TOGGLE DARK LIGHT MODE -->
+    <div class="flex justify-center mt-5 mb-5">
+      <span class="text-sm text-slate-500 mr-2">Light</span>
+      <input type="checkbox" id="toggle" class="hidden" />
+      <label for="toggle">
+        <div
+          class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer"
+        >
+          <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+        </div>
+      </label>
+      <span class="text-sm text-slate-500 ml-2">Dark</span>
+    </div>
+    <section
+      class="bg-white shadow-xl min-h-screen min-w-full p-3 grid gap-10 lg:grid-rows-10 md:grid-cols-4 md:gap-2 dark:bg-black dark:text-white"
+    >
+      <div class="border border-slate-300 shadow-md mx-auto">
+        <img src="src/img/PhotoOfTheMoment1644836198_DSCF8485.jpg" alt="" />
+        <div
+          class="text-slate-900 mt-2 ml-2 font-medium text-sm dark:text-white"
+        >
+          <h2>Photo Of The Moment</h2>
+          <h2 class="mt-2 mb-2">Week 1</h2>
+        </div>
+      </div>
+
+      <div class="md:col-start-1 md:row-start-2 md:mt-5">
+        <h1 class="mb-3 font-poppins font-semibold text-center">
+          Match Fixture
+        </h1>
+
+        <div class="grid gap-5 border border-slate-300 shadow-md p-2">
+          <div class="flex justify-center items-baseline gap-5">
+            <div>
+              <img src="src/img/allstarA.webp" alt="" width="400" />
+              <p class="text-center font-medium text-xs">All-Start A</p>
+            </div>
+
+            <p class="self-center">VS</p>
+
+            <div>
+              <img src="src/img/2021.webp" alt="" width="400" />
+              <p class="text-center font-medium text-xs">Nemotic</p>
+            </div>
+          </div>
+
+          <div class="flex justify-center items-baseline gap-5">
+            <div>
+              <img src="src/img/allstarA.webp" alt="" width="400" />
+              <p class="text-center font-medium text-xs">All-Start B</p>
+            </div>
+
+            <p class="self-center">VS</p>
+
+            <div>
+              <img src="src/img/syscomas.webp" alt="" width="400" />
+              <p class="text-center font-medium text-xs">Syscomas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:col-start-4 md:row-start-1">
+        <div class="grid gap-5 border border-slate-300 shadow-md p-2">
+          <h1 class="-mb-2 font-poppins font-semibold">
+            Top Headlines Story 🏴
+          </h1>
+          <div class="py-0.5 dark:bg-black rounded-sm"></div>
+          <h1 class="-mt-2 font-poppins font-semibold">Other Headlines</h1>
+          <ul class="-mt-2 ml-2 flex flex-col gap-4">
+            <li class="text-xs uppercase text-slate-500">> Coming Soon</li>
+            <li class="text-xs uppercase text-slate-500">> Coming Soon</li>
+            <li class="text-xs uppercase text-slate-500">> Coming Soon</li>
+            <li class="text-xs uppercase text-slate-500">> Coming Soon</li>
+            <li class="text-xs uppercase text-slate-500">> Coming Soon</li>
+            <li class="text-xs uppercase text-slate-500">> Coming Soon</li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="grid gap-5 mx-auto border border-slate-300 shadow-md pb-5 md:col-start-2 md:col-span-2 md:row-end-2"
+      >
+        <img src="src/img/berita.jpg" alt="" class="" />
+        <div class="grid gap-2 px-5">
+          <p class="text-slate-500 text-xs">20 MARCH 2016</p>
+          <h1 class="font-poppins font-semibold">BERITA COMING SOON</h1>
+          <p class="font-light text-sm">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+            sapiente expedita porro quod consequatur adipisci nobis magnam! Amet
+            quisquam nulla minima nobis. Eum neque quam eos culpa quidem aliquam
+            quis.
+          </p>
+        </div>
+      </div>
+      <div class="md:col-start-2 md:col-span-2 md:self-center md:text-center">
+        <h1
+          class="dark:block font-gaul font-extrabold text-5xl tracking-[2rem] text-sky-900 invisible dark:visible"
+        >
+          DARK MODE
+        </h1>
+      </div>
+      <h1
+        class="invisible dark:visible font-gaul font-extrabold text-5xl md:col-start-4 md:row-start-2 md:rotate-90 md:self-center md:text-center tracking-[2rem] text-sky-900"
+      >
+        DARK MODE
+      </h1>
+    </section>
+
+    <script>
+      const checkbox = document.querySelector("#toggle");
+      const html = document.querySelector("html");
+
+      checkbox.addEventListener("click", function () {
+        checkbox.checked
+          ? html.classList.add("dark")
+          : html.classList.remove("dark");
+      });
+    </script>
+  </body>
+</html>
